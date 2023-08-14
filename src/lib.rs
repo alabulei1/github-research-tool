@@ -32,7 +32,7 @@ pub async fn run() {
     // the author hasn't figured out how to achieve the run once in programs' lifetime,
     // you need to disable this line after first successful run
     // compile the program again and run it again.
-    // _ = register_commands(&discord_token).await;
+    _ = register_commands(&discord_token).await;
 
     let bot = ProvidedBot::new(discord_token);
     bot.listen(|em| handle(&bot, em)).await;
